@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Item List Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Item List Generator</h1>
+        <div id="levelInput">
+            <label for="userCount">Number of Users:</label>
+            <input type="number" id="userCount" min="1" value="1">
+            <button type="button" onclick="addUserInputs()">start / Update</button> <br>
+            <label for="gameLevel">Enter Your Game Level:</label>
+            <input type="number" id="gameLevel" min="1" value="1000"><button type="button"
+                onclick="filterProducts()">Filter Products by level / Refresh</button>
+
+
+
+        </div>
+        <div class="product-list" id="productList">
+            <!-- Product images and input fields will be added here dynamically -->
+        </div>
+        <button type="button" onclick="generateItemList()">Create List</button>
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
+                    <th>
+                        <img src="products/product56.jpg" alt="Coins" width="20px">
+                        <img src="products/product112.jpg" alt="Coins" width="20px">
+                        <img src="products/product160.jpg" alt="Coins" width="20px">
+                    </th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
+                    <th>
+                        <img src="products/product56.jpg" alt="Coins" width="20px">
+                        <img src="products/product112.jpg" alt="Coins" width="20px">
+                        <img src="products/product160.jpg" alt="Coins" width="20px">
+                    </th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
+                    <th>
+                        <img src="products/product56.jpg" alt="Coins" width="20px">
+                        <img src="products/product112.jpg" alt="Coins" width="20px">
+                        <img src="products/product160.jpg" alt="Coins" width="20px">
+                    </th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
+                    <th>
+                        <img src="products/product56.jpg" alt="Coins" width="20px">
+                        <img src="products/product112.jpg" alt="Coins" width="20px">
+                        <img src="products/product160.jpg" alt="Coins" width="20px">
+                    </th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
+                    <th>
+                        <img src="products/product56.jpg" alt="Coins" width="20px">
+                        <img src="products/product112.jpg" alt="Coins" width="20px">
+                        <img src="products/product160.jpg" alt="Coins" width="20px">
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Item rows will be added here dynamically -->
+            </tbody>
+        </table>
+        <div id="totalPrice"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
