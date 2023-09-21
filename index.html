@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="photos/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <title>Item List Generator</title>
 </head>
@@ -30,51 +31,36 @@
             <thead>
                 <tr>
                     <th>Image</th>
-                    <th>Quantity</th>
-                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
-                    <th>
-                        <img src="products/product56.jpg" alt="Coins" width="20px">
-                        <img src="products/product112.jpg" alt="Coins" width="20px">
-                        <img src="products/product160.jpg" alt="Coins" width="20px">
-                    </th>
+                    <th>Details</th>
+
                     <th>Image</th>
-                    <th>Quantity</th>
-                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
-                    <th>
-                        <img src="products/product56.jpg" alt="Coins" width="20px">
-                        <img src="products/product112.jpg" alt="Coins" width="20px">
-                        <img src="products/product160.jpg" alt="Coins" width="20px">
-                    </th>
+                    <th>Details</th>
+
                     <th>Image</th>
-                    <th>Quantity</th>
-                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
-                    <th>
-                        <img src="products/product56.jpg" alt="Coins" width="20px">
-                        <img src="products/product112.jpg" alt="Coins" width="20px">
-                        <img src="products/product160.jpg" alt="Coins" width="20px">
-                    </th>
+                    <th>Details</th>
+
                     <th>Image</th>
-                    <th>Quantity</th>
-                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
-                    <th>
-                        <img src="products/product56.jpg" alt="Coins" width="20px">
-                        <img src="products/product112.jpg" alt="Coins" width="20px">
-                        <img src="products/product160.jpg" alt="Coins" width="20px">
-                    </th>
+                    <th>Details</th>
+
                     <th>Image</th>
-                    <th>Quantity</th>
-                    <th><img src="photos/Coins.jpg" alt="Coins" width="20px"></th>
-                    <th>
-                        <img src="products/product56.jpg" alt="Coins" width="20px">
-                        <img src="products/product112.jpg" alt="Coins" width="20px">
-                        <img src="products/product160.jpg" alt="Coins" width="20px">
+                    <th>Details</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Item rows will be added here dynamically -->
             </tbody>
         </table>
-        <div id="totalPrice"></div>
+        <div id="totalAll">
+
+            Total <img src="photos/Coins.jpg" alt="Coins" width="20px"> : <b id="totalPrice"></b>
+            <br>
+            Total <img src="products/product56.jpg" alt="" width="20px"> : <b id="totalPriceD"></b>
+            <br>
+            Total <img src="products/product112.jpg" alt="" width="20px"> : <b id="totalPriceR"></b>
+            <br>
+            Total <img src="products/product160.jpg" alt="" width="20px"> : <b id="totalPriceB"></b>
+
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

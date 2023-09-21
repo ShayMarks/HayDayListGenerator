@@ -27,10 +27,10 @@ function addUserInputs() {
         productItem.appendChild(document.createElement('br'));
 
         // Create and append option elements for 1x to 5x
-        for (let multiplier = 1; multiplier <= 10; multiplier++) {
+        for (let multiplier = 1; multiplier <= 16; multiplier++) {
             const optionElement = document.createElement('option');
             optionElement.value = multiplier;
-            optionElement.text = `${multiplier * 500}`;
+            optionElement.text = `${multiplier * 250}`;
             selectElement.appendChild(optionElement);
         }
 
@@ -155,22 +155,39 @@ function generateItemList() {
             const subtotal = price * totalQuantity;
             totalPrice += subtotal; // Add to the total price
 
+            const totalAllDiv = document.getElementById('totalAll');
+            totalAllDiv.style.display = 'block'; // Show the totalAll div
+
             // Add the product image, item name, total quantity, and price to the current row
             newRow.innerHTML += `
                 <td>${imageElement.outerHTML}</td>
-                <td>${totalQuantity}</td>
-                <td>${subtotal}</td>
-                <td><img src="products/product56.jpg" alt="Coins" width="20px"> =  ${((price * totalQuantity) / 327).toFixed(2)} <br> 
-                <img src="products/product112.jpg" alt="Coins" width="20px"> = ${((price * totalQuantity) / 824).toFixed(2)} <br> 
-                <img src="products/product160.jpg" alt="Coins" width="20px"> = ${((price * totalQuantity) / 1098).toFixed(2)} <br> </td>
+                <td><h3> Quantity = ${totalQuantity} </h3><br>
+                One unit <img src="photos/Coins.jpg" alt="Coins" width="20px"> = ${price} <br> <br> 
+                All together :<br>
+                <img src="photos/Coins.jpg" alt="Coins" width="20px"> =  ${subtotal} <br>
+                <img src="products/product56.jpg" alt="" width="20px"> =  ${((price * totalQuantity) / 327).toFixed(2)} <br> 
+                <img src="products/product112.jpg" alt="" width="20px"> = ${((price * totalQuantity) / 824).toFixed(2)} <br> 
+                <img src="products/product160.jpg" alt="" width="20px"> = ${((price * totalQuantity) / 1098).toFixed(2)} <br> </td>
             `;
             productCount++;
         } else {
             // Hide irrelevant products
             productItem.style.display = 'none';
         }
+
         const totalElement = document.getElementById('totalPrice');
-        totalElement.textContent = `Total coins: ${totalPrice}`;
+        totalElement.textContent = `${totalPrice}`;
+
+
+        const totalElementD = document.getElementById('totalPriceD');
+        totalElementD.textContent = `${(totalPrice / 327).toFixed(2)} `;
+
+
+        const totalElementR = document.getElementById('totalPriceR');
+        totalElementR.textContent = `${(totalPrice / 824).toFixed(2)} `;
+
+        const totalElementB = document.getElementById('totalPriceB');
+        totalElementB.textContent = `${(totalPrice / 1098).toFixed(2)} `;
     });
 }
 
@@ -583,7 +600,7 @@ function getProductRequiredLevel(productName) {
 
     for (let i = 1; i <= 21; i++) {
         const productName = `product-${i}`;
-        productData[productName] = { requiredLevel: 1, price: 500 };
+        productData[productName] = { requiredLevel: 1, price: 250 };
     }
 
     return productData[productName] || { requiredLevel: 1, price: 0 };

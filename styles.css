@@ -110,34 +110,21 @@ table#itemTable td {
 }
 
 /* Style the specified columns with darker background */
-table#itemTable td:nth-child(5),
-table#itemTable td:nth-child(6),
+table#itemTable td:nth-child(3),
+table#itemTable td:nth-child(4),
 table#itemTable td:nth-child(7),
-table#itemTable td:nth-child(8),
-
-table#itemTable td:nth-child(13),
-table#itemTable td:nth-child(14),
-table#itemTable td:nth-child(15),
-table#itemTable td:nth-child(16) {
-    background-color: #161616;
+table#itemTable td:nth-child(8) {
+    background-color: #0a2429;
     color: #fff;
 }
 
 table#itemTable td:nth-child(1),
 table#itemTable td:nth-child(2),
-table#itemTable td:nth-child(3),
-table#itemTable td:nth-child(4),
-
+table#itemTable td:nth-child(5),
+table#itemTable td:nth-child(6),
 table#itemTable td:nth-child(9),
-table#itemTable td:nth-child(10),
-table#itemTable td:nth-child(11),
-table#itemTable td:nth-child(12),
-
-table#itemTable td:nth-child(17),
-table#itemTable td:nth-child(18),
-table#itemTable td:nth-child(19),
-table#itemTable td:nth-child(20) {
-    background-color: #0c0c0c;
+table#itemTable td:nth-child(10) {
+    background-color: #0e1b1d;
     color: #fff;
 }
 
@@ -185,8 +172,7 @@ table#itemTable td:nth-child(20) {
 }
 
 /* Style for the total price container */
-#totalPrice {
-    display: flex;
+#totalAll {
     justify-content: flex-end;
     align-items: center;
     background-color: #001a17;
@@ -195,13 +181,17 @@ table#itemTable td:nth-child(20) {
     font-size: 20px;
     border-radius: 10px;
     margin-top: 20px;
+    text-align: right;
     /* Add margin to separate it from the table */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
+
+    display: none;
+
 }
 
 /* Add a hover effect */
-#totalPrice:hover {
+#totalAll:hover {
     background-color: #7ac5bc;
     color: #001a17;
 
