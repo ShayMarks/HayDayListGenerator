@@ -39,7 +39,6 @@ The Item List Generator is a web application designed to help users generate and
 
 - **Styling**: Modify the CSS styles to match your preferred design aesthetic.
 
-![Image Alt Text](https://www.juicymedia.co.uk/application/files/4615/1838/4923/html_css_js.png)
 ## Contribution
 
 Contributions are welcome! If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
